@@ -14,8 +14,9 @@
 */
 
 $router->group(['prefix' => 'api'], function ($router) {
-    $router->get('sources/{code}/translations', 'SourceController@getTranslations');
-    $router->get('sources/{code}/translations/{file}', 'SourceController@getTranslation');
+  $router->get('sources/{code}/translations', 'SourceController@getTranslations');
+  $router->get('sources/{code}/translations/{file}', 'SourceController@getTranslation');
+  $router->post('translations/{file}', 'SourceController@saveTranslation');
 });
 
 $router->get('/{route:.*}/', function ()  {

@@ -4,7 +4,7 @@
       <router-link
         v-for="tran in cnTrans"
         :key="tran"
-        class="py-2 px-4 w-full text-left text-blue-600 hover:text-blue-900"
+        class="py-2 px-4 w-full text-left text-gray-600 border-b"
         :to="`/translations/${tran}`"
       >
         {{ tran }}
@@ -31,3 +31,11 @@ onMounted(() => {
   fetchSource();
 });
 </script>
+
+<style scoped>
+.router-link-exact-active {
+  background-color: rgba(75, 85, 99);
+  color: white;
+  user-select: none;
+}
+</style>

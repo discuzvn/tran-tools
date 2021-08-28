@@ -39,4 +39,25 @@ export class HttpClient {
       this.handleResponse(response)
     );
   }
+
+  async getTry<T>(url: string, defaultResponse: any): Promise<T> {
+    try {
+      return await this.get(url);
+    } catch (e) {
+      return defaultResponse;
+    }
+  }
+
+  async post<T>(url: string, body: any): Promise<T> {
+    const requestOptions = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+    };
+    return fetch(this.buildUrl(url), requestOptions).then((response) =>
+      this.handleResponse(response)
+    );
+  }
 }

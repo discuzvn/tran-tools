@@ -25,8 +25,19 @@ class SourceController extends Controller
 
     public function getTranslation($code, $file): JsonResponse
     {
-        $fullPath = base_path() . '/source_'. $code . '/' . $file . LANG_EXT;
-        $plainText = file_get_contents($fullPath);
-        return response()->json(json_decode($plainText));
+        try {
+          $fullPath = base_path() . '/source_'. $code . '/' . $file . LANG_EXT;
+          $plainText = file_get_contents($fullPath);
+          return response()->json(json_decode($plainText));
+        } catch (\Exception $e) {
+          return response()->json(['ok' => false], 404);
+        }
+    }
+
+    public function saveTranslation($file): JsonResponse
+    {
+      $fullPath = base_path() . '/source_translated/' . $file . LANG_EXT;
+      file_put_contents($fullPath, json_encode(request()->all(), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+      return response()->json(['ok' => 'true']);
     }
 }
