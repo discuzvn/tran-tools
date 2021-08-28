@@ -1,0 +1,5 @@
+{
+    "email_name": "Xác nhận Email",
+    "email_desc": "Bạn cần xác nhận Email và sau đó nhận thưởng.",
+    "email_view": "<strong>Làm theo các bước sau để hoàn thành nhiệm vụ:<\/strong>\r\n\t\t<ul>\r\n\t\t<li><a href=\"home.php?mod=spacecp&ac=profile&op=password\" target=\"_blank\">Vào trang cá nhân<\/a><\/li>\r\n\t\t<li>Điền vào email của bạn rồi nhấn \"xác nhận email\"<\/li>\r\n\t\t<li>Hệ thống sẽ gủi email cho bạn, bạn đọc email và làm theo hướng dẫn để hoàn thành.<\/li>\r\n\t\t<\/ul>"
+}

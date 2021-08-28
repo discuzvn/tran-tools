@@ -1,0 +1,7 @@
+{
+    "group_normal_member": "设为普通成员",
+    "group_goaway": "踢出群组",
+    "group_demise_message_title": null,
+    "group_demise_message_body": null,
+    "group_join": "加入{groupname}群组"
+}

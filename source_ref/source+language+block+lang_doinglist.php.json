@@ -1,0 +1,12 @@
+{
+    "doinglist_uids": "ID người dùng",
+    "doinglist_uids_comment": "Thiết lập người dùng mà bạn muốn hiển thị.Sử dụng \",\"  ngăn cách nhiều UIDs",
+    "doinglist_startrow": "Hàng đầu tiên",
+    "doinglist_startrow_comment": "Điền số 0 nếu muốn là hàng đầu tiên.",
+    "doinglist_titlelength": "Tiêu đề hoạt động",
+    "doinglist_titlelength_comment": "Thiết lập độ dài tối đa của tiêu đề.",
+    "doinglist_orderby": "Sắp xếp",
+    "doinglist_orderby_comment": "Thiết lập sắp xếp theo nguồn dữ liệu",
+    "doinglist_orderby_dateline": "Theo thời gian đăng",
+    "doinglist_orderby_replynum": "Trả lời"
+}

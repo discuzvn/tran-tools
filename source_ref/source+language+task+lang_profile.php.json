@@ -1,0 +1,5 @@
+{
+    "profile_name": "Cập nhật thông tin",
+    "profile_desc": "Truy cập vào trang cá nhân cập nhật các thông tin.",
+    "profile_view": "<strong>Bạn cần cập nhật các mục sau:<\/strong><br>\t\t<span style=\"color:red;\">{profiles}<\/span><br><br>\r\n\t\t<strong>Thực hiện theo các hướng dẫn để hoàn thành nhiệm vụ này:<\/strong>\r\n\t\t<ul>\r\n\t\t<li><a href=\"home.php?mod=spacecp&ac=profile\" target=\"_blank\" class=\"xi2\">Vào trang cá nhân<\/a><\/li>\r\n\t\t<li>Điền đầy đủ các thông tin cá nhân của bạn.<\/li>\r\n\t\t<\/ul>"
+}

@@ -1,0 +1,10 @@
+{
+    "interthread_name": "Giữa các bài viết",
+    "interthread_desc": "Hiển thị: Hiển thị giữa các bài viết, thường là ảnh 468x60 hoặc flash.",
+    "interthread_fids": "Diễn đàn",
+    "interthread_fids_comment": "Chọn diễn đàn để quảng cáo hiển thị",
+    "interthread_groups": "Nhóm thành viên",
+    "interthread_groups_comment": "Chọn chuyên mục nhóm để quảng cáo hiển thị",
+    "interthread_pnumber": "Quảng cáo bài trả lời",
+    "interthread_pnumber_comment": "Chọn các #1 #2 #3 ... Giữ Ctrl để chọn nhiều"
+}
