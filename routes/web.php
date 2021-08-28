@@ -13,10 +13,12 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/{route:.*}/', function ()  {
+    return view('app');
 });
 
-$router->get('sources/{code}/translations', 'SourceController@getTranslations');
 
-$router->get('sources/{code}/translations/{file}', 'SourceController@getTranslation');
+$router->group(['prefix' => 'api'], function ($router) {
+    $router->get('sources/{code}/translations', 'SourceController@getTranslations');
+    $router->get('sources/{code}/translations/{file}', 'SourceController@getTranslation');
+});
