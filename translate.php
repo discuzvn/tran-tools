@@ -61,7 +61,6 @@ function translate($ast, $translatedDict): array
 function scan_and_make_translation_source($input_dir) {
   $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
   $prettyPrinter = new PrettyPrinter\Standard;
-
   foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php")) as $full_path_filename) {
     $code = file_get_contents($full_path_filename);
     $ast = $parser->parse($code);
@@ -71,8 +70,7 @@ function scan_and_make_translation_source($input_dir) {
     $output = translate($ast, $translatedDict);
 
     file_put_contents($full_path_filename, $prettyPrinter->prettyPrintFile($output['ast']));
-
-    break;
+    shell_exec('./node_modules/.bin/prettier ' . $full_path_filename . ' --write --php-version=5.3  --single-quote');
   }
 }
 
