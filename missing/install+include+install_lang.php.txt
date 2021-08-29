@@ -1,0 +1,13 @@
+title_install
+enable
+disable
+tips_dbinfo_comment
+install_locked
+dbname_comment
+dbuser_comment
+dbpw_comment
+install_dzfull
+install_dzonly
+license
+opcache
+curl

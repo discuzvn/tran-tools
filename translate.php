@@ -30,7 +30,7 @@ class BuildDictionary extends NodeVisitorAbstract
   {
     if ($node instanceof Node\Expr\ArrayItem) {
       if ($node->value->value) {
-        if (isset($this->translatedDict[$node->key->value])) {
+        if (isset($this->translatedDict[$node->key->value]) && strlen($this->translatedDict[$node->key->value]) > 0) {
           $node->value = new Node\Scalar\String_($this->translatedDict[$node->key->value]);
         } else {
           // not available in the translation dictionary
@@ -61,7 +61,7 @@ function translate($ast, $translatedDict): array
 function scan_and_make_translation_source($input_dir) {
   $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
   $prettyPrinter = new PrettyPrinter\Standard;
-  foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php")) as $full_path_filename) {
+  foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php"), rglob($input_dir . "*_lang.php")) as $full_path_filename) {
     $code = file_get_contents($full_path_filename);
     $ast = $parser->parse($code);
     $cleanPath = str_replace( '/', '+', substr($full_path_filename, strlen($input_dir)));
