@@ -16,12 +16,12 @@
       </thead>
       <tbody>
         <slot v-for="(value, key) in cnTranslations" :key="key">
-          <tr>
+          <tr :key="`title-${String(key)}`">
             <td colspan="3" class="px-3 pt-2">
               <h4 class="text-gray-800 text-sm">{{ key }}</h4>
             </td>
           </tr>
-          <tr>
+          <tr :key="`detail-${String(key)}`">
             <td class="border-b px-3 pb-2">
               <p class="font-medium">
                 {{ value }}
@@ -31,14 +31,28 @@
                   :href="`https://translate.google.com/?sl=zh-CN&tl=en&text=${value}&op=translate`"
                   target="_blank"
                   class="text-sm text-blue-600"
-                  >Google Translate</a
+                  >Google (EN)</a
+                >
+                ·
+                <a
+                  :href="`https://translate.google.com/?sl=zh-CN&tl=vi&text=${value}&op=translate`"
+                  target="_blank"
+                  class="text-sm text-blue-600"
+                  >Google (VN)</a
                 >
                 ·
                 <a
                   :href="`https://fanyi.baidu.com/#zh/en/${value}`"
                   target="_blank"
                   class="text-sm text-blue-600"
-                  >Baidu</a
+                  >Baidu (EN)</a
+                >
+                ·
+                <a
+                  :href="`https://fanyi.baidu.com/#zh/vie/${value}`"
+                  target="_blank"
+                  class="text-sm text-blue-600"
+                  >Baidu (VN)</a
                 >
               </div>
             </td>
@@ -66,6 +80,7 @@
     <button
       class="fixed bottom-1 right-8 text-white bg-blue-600 px-4 py-2 rounded-md"
       @click="save"
+      :disabled="saving"
     >
       Lưu bản dịch
     </button>
@@ -83,6 +98,7 @@ const refTranslations = ref();
 const edTranslations = ref();
 const toTranslations = ref<Record<string, string>>({});
 const statusMap = ref<Record<string, string>>({});
+const saving = ref(false);
 
 const fetchTranslations = async (file: string) => {
   const cnRes = await client.getTry<Record<string, string>>(
@@ -105,7 +121,7 @@ const fetchTranslations = async (file: string) => {
   toTranslations.value = Object.keys(cnRes).reduce((prev, curr) => {
     return {
       ...prev,
-      [curr]: edRes[curr] ?? refRes[curr] ?? cnRes[curr],
+      [curr]: edRes[curr] ?? refRes[curr],
     };
   }, {});
 
@@ -122,7 +138,13 @@ const setTranslation = (key: string | number | symbol, value: string) => {
 };
 
 const save = async () => {
-  client.post(`/api/translations/${route.params.file}`, toTranslations.value);
+  saving.value = true;
+  await client.post(
+    `/api/translations/${route.params.file}`,
+    toTranslations.value
+  );
+  fetchTranslations(route.params.file.toString());
+  saving.value = false;
 };
 
 onMounted(() => {

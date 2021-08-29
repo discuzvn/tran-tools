@@ -1,0 +1,6 @@
+{
+    "visit_name": "Thẻ ghé thăm",
+    "visit_desc": "Truy cập ngẫu nhiên vào Blog\/Chào hỏi\/Trêu chọc",
+    "visit_num": "Lượt ghé thăm",
+    "visit_info": "Truy cập ngẫu nhiên (lên đến {num} lần)"
+}

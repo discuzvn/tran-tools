@@ -1,0 +1,5 @@
+{
+    "connect_bind_name": "Kết nối tài khoản QQ",
+    "connect_bind_desc": "Kết nối với tài khoản QQ để nhận thưởng",
+    "connect_bind_view": "<strong>hực hiện theo các hướng dẫn để tham gia vào các nhiệm vụ:<\/strong>\r\n\t\t<ul>\r\n\t\t<li>1. <a href=\"connect.php?mod=config\" target=\"_blank\">Trang kết nối QQ<\/a><\/li>\r\n\t\t<li>2. Điền số QQ và mật khẩu để hoàn thành nhiệm vụ<\/li>\r\n\t\t<\/ul>"
+}

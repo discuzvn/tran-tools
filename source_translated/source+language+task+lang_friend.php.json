@@ -1,0 +1,5 @@
+{
+    "friend_name": "Kết bạn",
+    "friend_desc": "Bạn cần thêm 5 người bạn để hoàn thành nhiệm vụ.",
+    "friend_view": "<strong>Làm theo các bước sau để hoàn thành nhiệm vụ:<\/strong>\r\n\t\t<ul>\r\n\t\t<li>1. <a href=\"home.php?mod=spacecp&ac=friend&op=find\" target=\"_blank\">Vào trang tìm bạn bè<\/a><\/li>\r\n\t\t<li>2. Làm theo các lựa chọn để tìm những người bạn của mình và thêm vào danh sách.<\/li>\r\n\t\t<li>3. Tiếp theo, bạn cần phải chờ cho họ chấp nhận bạn là bạn của họ.<\/li>\r\n\t\t<\/ul>"
+}

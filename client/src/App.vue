@@ -6,6 +6,7 @@
         :key="tran"
         class="py-2 px-4 w-full text-left text-gray-600 border-b"
         :to="`/translations/${tran}`"
+        :title="tran"
       >
         {{ tran }}
       </router-link>

@@ -1,0 +1,5 @@
+{
+    "blog_name": "Viết Blog",
+    "blog_desc": "Bạn chỉ cần viết một bài trong Blog của mình và nhận phần thưởng.",
+    "blog_view": "<strong>Thực hiện theo các hướng dẫn để hoàn thành nhiệm vụ:<\/strong>\r\n\t\t<ul>\r\n\t\t<li>1. <a href=\"home.php?mod=spacecp&ac=blog\" target=\"_blank\">Vào trang Blog<\/a><\/li>\r\n\t\t<li>2. Viết bài viết đầu tiên của mình, và đăng lên<\/li>\r\n\t\t<\/ul>"
+}
