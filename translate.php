@@ -64,13 +64,18 @@ function scan_and_make_translation_source($input_dir) {
   foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php")) as $full_path_filename) {
     $code = file_get_contents($full_path_filename);
     $ast = $parser->parse($code);
-    $raw = file_get_contents('./source_translated/' . str_replace( '/', '+', substr($full_path_filename, strlen($input_dir))) . '.json');
+    $cleanPath = str_replace( '/', '+', substr($full_path_filename, strlen($input_dir)));
+    $raw = file_get_contents('./source_translated/' . $cleanPath . '.json');
     $translatedDict = json_decode($raw, true);
 
     $output = translate($ast, $translatedDict);
 
     file_put_contents($full_path_filename, $prettyPrinter->prettyPrintFile($output['ast']));
     shell_exec('./node_modules/.bin/prettier ' . $full_path_filename . ' --write --php-version=5.3  --single-quote');
+
+    if (count($output['unTranslated']) > 0) {
+      file_put_contents('./missing/' . $cleanPath . '.txt', implode(PHP_EOL, $output['unTranslated'] ));
+    }
   }
 }
 

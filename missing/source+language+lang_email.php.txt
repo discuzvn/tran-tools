@@ -1,0 +1,10 @@
+get_passwd_message
+email_verify_message
+email_register_message
+add_member_message
+birthday_message
+email_to_friend_message
+email_to_invite_message
+moderate_member_message
+adv_expiration_message
+invite_payment_email_message

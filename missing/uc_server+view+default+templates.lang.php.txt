@@ -1,0 +1,12 @@
+app_not_add_tips
+setting_tips
+setting_addappbyurl
+setting_addappbyurl_comment
+setting_user_failedtime
+setting_user_failedtime_comment
+home_envstatus
+admin_editfoundertips
+envstatus_result
+envstatus_ver_too_low
+envstatus_not_found
+envstatus_ok

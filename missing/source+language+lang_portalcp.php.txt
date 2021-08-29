@@ -1,0 +1,6 @@
+article_category_empty
+article_edit_nopermission
+group/index
+group/group_my
+group/group
+home/space_group

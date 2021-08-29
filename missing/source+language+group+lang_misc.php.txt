@@ -1,0 +1,2 @@
+group_demise_message_title
+group_demise_message_body
