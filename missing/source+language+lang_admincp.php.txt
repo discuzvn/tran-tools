@@ -343,7 +343,6 @@ collection_recommend_existed
 collection_recommend_tips
 collection_recommend_index_autonumber
 collection_recommend_index_autonumber_comment
-usertag_add_tips
 setting_mobile_allowmnew
 setting_mobile_allowmnew_comment
 setting_mobile_otherindex
@@ -406,7 +405,6 @@ forums_edit_extend_domain_comment
 forums_edit_extend_picstyle_comment
 forums_edit_extend_reply_background
 forums_edit_extend_reply_background_comment
-forums_edit_posts_allowfeed_comment
 forums_edit_posts_noantitheft
 forums_edit_posts_noantitheft_comment
 forums_edit_posts_noforumhidewater
@@ -463,7 +461,6 @@ members_ipban_input_comment
 members_profile_numbercard
 members_profile_numbercard_tips
 members_profile_edit_showinthread_comment
-admingroup_edit_edit_post_comment
 admingroup_edit_live_thread
 admingroup_edit_live_thread_comment
 admingroup_edit_allow_make_html
@@ -503,7 +500,6 @@ blog_restore_succeed
 moderate_validate_list
 misc_link_tips
 misc_censor_batch_add_clear
-faq_keywords_comment
 plugins_visit
 plugins_validator_new
 plugins_question
@@ -517,15 +513,11 @@ plugins_edit_modules_type_10
 plugins_edit_modules_type_18
 plugins_edit_modules_type_29
 card_config_open_comment
-magics_config_open_comment
 tasks_status
 tasks_status_0
 tasks_status_1
 tasks_status_2
 tasks_status_3
-tasks_add_starttime_comment
-tasks_add_endtime_comment
-tasks_add_relatedtask_comment
 ec_alipay_tips
 extended_tag_tips
 filecheck_check_now

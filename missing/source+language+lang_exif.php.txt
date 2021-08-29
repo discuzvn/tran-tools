@@ -5,4 +5,3 @@ exposureprogram
 meteringmode
 lightsource
 img_info
-文件信息

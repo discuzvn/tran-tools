@@ -1,4 +1,3 @@
 connectguest_message_search
 connectguest_message_replace
 connectguest_message_mobile_search
-seccode_player

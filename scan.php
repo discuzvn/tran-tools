@@ -40,7 +40,7 @@ function build_tran_dictionary($ast): array
 
 function scan_and_make_translation_source($input_dir, $output_dir) {
     $parser = (new ParserFactory)->create(ParserFactory::PREFER_PHP7);
-    foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php")) as $full_path_filename) {
+    foreach (array_merge(rglob($input_dir . "*.lang.php"), rglob($input_dir . "lang_*.php"), rglob($input_dir . "*_lang.php")) as $full_path_filename) {
         $code = file_get_contents($full_path_filename);
         $ast = $parser->parse($code);
         $tran_dictionary = build_tran_dictionary($ast);
